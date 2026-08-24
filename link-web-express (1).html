@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#11120f">
+  <title>LINK — Web desde $100.000</title>
+  <meta name="description" content="Primera reunión y prototipo gratis. Web profesional desde $100.000 CLP. Dominio y hosting por separado. Escala a reservas, CRM, automatización, IA y estrategia.">
+  <style>
+    :root{--bg:#f4f0e6;--ink:#11120f;--acid:#d8ff58;--white:#fffdf7;--muted:#66685f;--line:rgba(17,18,15,.14);--soft:#e9e2d3}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.45}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 28px));margin:auto}
+    .nav{position:sticky;top:0;z-index:30;background:rgba(244,240,230,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .navin{height:68px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-size:25px;font-weight:950;letter-spacing:-.05em}
+    .btn{display:inline-flex;justify-content:center;align-items:center;padding:13px 19px;border-radius:999px;border:1.5px solid var(--ink);font-weight:850;cursor:pointer}
+    .btn.dark{background:var(--ink);color:#fff;box-shadow:5px 5px 0 var(--acid)}
+    .hero{padding:78px 0 46px}.heroGrid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+    .eyebrow{display:inline-block;border:1px solid var(--ink);border-radius:999px;padding:7px 11px;background:var(--white);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.07em}
+    h1{font-size:clamp(52px,7.4vw,102px);line-height:.89;letter-spacing:-.07em;margin:20px 0 24px}.mark{background:var(--acid);padding:0 .1em .07em;border-radius:10px}
+    .lead{font-size:clamp(19px,2vw,26px);color:#303129;max-width:760px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .trust{display:flex;gap:16px;flex-wrap:wrap;margin-top:22px;font-size:13px;color:var(--muted);font-weight:700}.trust span:before{content:"✓ ";color:#1d6c45}
+    .mock{background:var(--ink);border-radius:34px;padding:20px;box-shadow:0 25px 80px rgba(20,20,15,.18);transform:rotate(1deg)}
+    .browser{background:#faf7ef;border-radius:22px;padding:14px}.dots{font-size:18px;letter-spacing:3px;color:#9b9a91}
+    .mini{height:260px;background:linear-gradient(135deg,#1d1e1a,#45483d);border-radius:16px;color:white;padding:26px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+    .mini:after{content:"";position:absolute;width:160px;height:160px;border-radius:50%;background:var(--acid);right:-45px;top:-45px}.mini b{font-size:33px;line-height:1;letter-spacing:-.04em;max-width:330px;z-index:1}.mini span{margin-top:12px;background:var(--acid);color:var(--ink);font-weight:900;padding:9px 12px;border-radius:999px;width:max-content;z-index:1}
+    .section{padding:82px 0}.head{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:end;margin-bottom:32px}.kick{font-size:12px;text-transform:uppercase;letter-spacing:.1em;font-weight:900;color:#52544b}
+    h2{font-size:clamp(38px,5vw,67px);line-height:.95;letter-spacing:-.055em;margin:7px 0}.head p{font-size:18px;color:var(--muted);margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:var(--white);border:1px solid var(--line);border-radius:26px;padding:26px;min-height:225px;display:flex;flex-direction:column;justify-content:space-between}
+    .num{width:34px;height:34px;border-radius:50%;border:1px solid var(--ink);display:grid;place-items:center;font-size:12px;font-weight:900}.card h3{font-size:28px;line-height:1;letter-spacing:-.04em;margin:36px 0 9px}.card p{color:var(--muted);margin:0}
+    .offer{background:var(--ink);color:#fff;border-radius:38px;padding:36px;display:grid;grid-template-columns:1fr .8fr;gap:32px}.price{font-size:clamp(68px,8vw,110px);font-weight:950;letter-spacing:-.07em;line-height:.9;margin:18px 0 10px}.price small{font-size:16px;color:#c7c7bf;letter-spacing:0}
+    .offer ul{padding:0;list-style:none;display:grid;gap:9px}.offer li:before{content:"↗ ";color:var(--acid);font-weight:900}.note{background:var(--bg);color:var(--ink);padding:24px;border-radius:25px}.note h3{font-size:31px;line-height:1.05;letter-spacing:-.04em}.fine{font-size:12px;color:var(--muted)}
+    .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.step{border-top:2px solid var(--ink);padding-top:15px}.step b{font-size:16px}.step span{display:block;font-size:13px;color:var(--muted);margin-top:6px}
+    .ladder{display:grid;gap:9px}.tier{display:grid;grid-template-columns:72px 1fr 210px 28px;gap:15px;align-items:center;padding:16px 18px;background:var(--white);border:1px solid var(--line);border-radius:18px}.tier.hot{background:var(--acid);border-color:var(--ink)}.tier small{font-weight:900;color:#666}.tier strong{font-size:19px}.tier em{font-style:normal;color:var(--muted);text-align:right;font-weight:750}
+    .campaign{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{background:var(--white);border:1px solid var(--line);border-radius:28px;padding:28px}.panel h3{font-size:31px;letter-spacing:-.04em;margin-top:0}.flow{display:grid;gap:8px}.flow div{display:flex;justify-content:space-between;gap:12px;border:1px dashed rgba(17,18,15,.25);border-radius:14px;padding:13px}.flow span{font-size:12px;color:var(--muted)}
+    .ad{background:var(--ink);color:white;border-radius:28px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;min-height:390px;position:relative;overflow:hidden}.ad:after{content:"";position:absolute;width:170px;height:170px;border-radius:50%;background:var(--acid);right:-45px;top:-45px}.ad h3{font-size:49px;line-height:.93;letter-spacing:-.055em;max-width:450px;z-index:1}.ad p{color:#d2d2c9;max-width:430px;z-index:1}.ad .btn{background:var(--acid);color:var(--ink);border-color:var(--acid);align-self:flex-start;z-index:1}
+    .calc{background:var(--soft);border-radius:30px;padding:28px;display:grid;grid-template-columns:1fr .8fr;gap:24px}.calc h3{font-size:35px;letter-spacing:-.04em;margin:0}.slider label{display:flex;justify-content:space-between;font-weight:850;margin:18px 0 7px}.slider input{width:100%;accent-color:#111}.result{background:var(--ink);color:#fff;border-radius:22px;padding:22px;display:flex;flex-direction:column;justify-content:center}.result strong{font-size:55px;color:var(--acid);letter-spacing:-.05em}
+    .faq{display:grid;grid-template-columns:.7fr 1.3fr;gap:35px}.faq details{border-top:1px solid var(--line);padding:17px 0}.faq details:last-child{border-bottom:1px solid var(--line)}summary{font-weight:850;font-size:18px;cursor:pointer}.faq p{color:var(--muted)}
+    .contact{background:var(--acid);border:1px solid var(--ink);border-radius:36px;box-shadow:7px 7px 0 var(--ink);padding:32px;display:grid;grid-template-columns:.85fr 1.15fr;gap:28px}.contact p{font-size:18px}
+    .form{background:var(--white);border-radius:25px;padding:22px;display:grid;gap:11px}.field{display:grid;gap:5px}.field label{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.07em}.field input,.field textarea,.field select{width:100%;padding:12px 13px;border-radius:12px;border:1px solid rgba(17,18,15,.23);background:#fbfaf5;font:inherit}.field textarea{min-height:88px;resize:vertical}.submit{border:0;border-radius:13px;background:var(--ink);color:#fff;padding:14px;font-weight:900;cursor:pointer}.success{display:none;background:#e6f6e8;border:1px solid #7caf84;border-radius:12px;padding:11px;font-weight:750}
+    footer{padding:30px 0 48px;color:var(--muted);font-size:13px}.footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.sticky{display:none}
+    @media(max-width:900px){.heroGrid,.head,.offer,.campaign,.calc,.faq,.contact{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.tier{grid-template-columns:55px 1fr 30px}.tier em{grid-column:2;text-align:left;margin-top:-8px}}
+    @media(max-width:620px){.wrap{width:calc(100% - 20px)}.hero{padding:48px 0 24px}h1{font-size:56px}.lead{font-size:18px}.actions .btn{width:100%}.cards,.steps{grid-template-columns:1fr}.section{padding:56px 0}.offer{padding:23px;border-radius:28px}.tier{grid-template-columns:44px 1fr 25px;padding:14px}.tier strong{font-size:16px}.ad h3{font-size:41px}.contact{padding:22px;border-radius:27px}.sticky{display:flex;position:fixed;bottom:10px;left:10px;right:10px;z-index:40;background:var(--ink);color:#fff;border-radius:999px;padding:9px 9px 9px 15px;align-items:center;justify-content:space-between;box-shadow:0 12px 35px rgba(0,0,0,.28);font-size:12px;font-weight:850}.sticky a{background:var(--acid);color:var(--ink);padding:10px 13px;border-radius:999px}footer{padding-bottom:86px}}
+  </style>
+</head>
+<body>
+<nav class="nav"><div class="wrap navin"><a class="brand" href="#top">● LINK</a><a class="btn dark" href="#contacto">Prototipo gratis</a></div></nav>
+
+<main id="top">
+<section class="hero"><div class="wrap heroGrid">
+  <div><span class="eyebrow">Primera reunión + prototipo: $0</span><h1>Tu negocio necesita una <span class="mark">web que venda.</span></h1>
+  <p class="lead">Partimos simple: construimos tu presencia digital desde <b>$100.000 CLP</b>. Después, solo si tiene sentido, escalamos a reservas, CRM, automatización, IA y estrategia comercial.</p>
+  <div class="actions"><a class="btn dark" href="#contacto" data-cta="hero">Pedir diagnóstico gratis →</a><a class="btn" href="#proceso">Ver cómo funciona</a></div>
+  <div class="trust"><span>Reunión inicial gratis</span><span>Prototipo inicial gratis</span><span>Presupuesto por etapas</span></div></div>
+  <div class="mock"><div class="browser"><div class="dots">● ● ●</div><div class="mini"><small>Así podría verse tu negocio</small><b>Más claro. Más confiable. Más fácil de comprar.</b><span>Reservar / Cotizar</span></div></div></div>
+</div></section>
+
+<section class="section"><div class="wrap">
+<div class="head"><div><div class="kick">Entrada simple</div><h2>No vendemos tecnología. Resolvemos primero lo evidente.</h2></div><p>Si hoy tu negocio depende de Instagram, WhatsApp o recomendaciones, creamos una base digital propia, clara y preparada para crecer.</p></div>
+<div class="cards"><article class="card"><span class="num">01</span><div><h3>Te encontramos</h3><p>Detectamos negocios con buena actividad pero sin web, o con una presencia digital que ya quedó atrás.</p></div></article><article class="card"><span class="num">02</span><div><h3>Te mostramos</h3><p>Conversamos sin costo y preparamos una idea visual antes de pedirte una gran inversión.</p></div></article><article class="card"><span class="num">03</span><div><h3>Construimos</h3><p>Partimos desde $100.000 y dejamos una ruta estimativa para crecer solo cuando sea útil.</p></div></article></div>
+</div></section>
+
+<section class="section" id="oferta"><div class="wrap offer">
+<div><div class="kick" style="color:#c7c8be">Producto de entrada</div><h2>WEB START</h2><div class="price">$100.000 <small>CLP</small></div><p style="color:#d5d5cd">Una web simple, profesional y móvil para que tu negocio tenga un lugar propio donde presentar y convertir.</p>
+<ul><li>Landing responsive</li><li>Presentación del negocio</li><li>Productos o servicios principales</li><li>Contacto, ubicación y redes</li><li>CTA de reserva, compra o cotización</li><li>SEO básico y publicación</li><li>1 ronda de ajustes</li></ul>
+<a class="btn" style="background:var(--acid);color:var(--ink);border-color:var(--acid)" href="#contacto" data-cta="offer">Quiero partir →</a></div>
+<aside class="note"><span class="eyebrow">Antes de pagar</span><h3>Primera reunión + prototipo inicial sin costo.</h3><p>Primero entendemos qué vendes y qué necesitas. Después recibes una propuesta visual y un presupuesto estimativo por etapas.</p><hr style="border:0;border-top:1px solid var(--line);margin:20px 0"><b>Se cotizan por separado:</b><p class="fine">Dominio, hosting, fotografía profesional, licencias, APIs, publicidad, proveedores externos, ecommerce o integraciones especiales.</p></aside>
+</div></section>
+
+<section class="section" id="proceso"><div class="wrap">
+<div class="head"><div><div class="kick">Paso a paso</div><h2>Sin contratos gigantes al principio.</h2></div><p>Construimos lo mínimo que genera valor y dejamos preparada la siguiente capa.</p></div>
+<div class="steps"><div class="step"><b>1. Diagnóstico</b><span>20–30 minutos para entender negocio, cliente y problema.</span></div><div class="step"><b>2. Prototipo</b><span>Una dirección visual concreta.</span></div><div class="step"><b>3. Presupuesto</b><span>Etapas claras y costos separados.</span></div><div class="step"><b>4. Desarrollo</b><span>Construcción, ajustes y publicación.</span></div><div class="step"><b>5. Crecimiento</b><span>La próxima mejora aparece según datos y necesidad.</span></div></div>
+</div></section>
+
+<section class="section" id="crecer"><div class="wrap">
+<div class="head"><div><div class="kick">Escalera LINK</div><h2>La web puede ser solo el comienzo.</h2></div><p>No necesitas contratar todo. Puedes crecer desde una página simple hasta una operación comercial conectada a datos, automatización e IA.</p></div>
+<div class="ladder"><div class="tier hot"><small>01</small><strong>Web Start</strong><em>desde $100.000</em><b>↗</b></div><div class="tier"><small>02</small><strong>Web Pro + catálogo + idiomas</strong><em>$200–350k estimado</em><b>↗</b></div><div class="tier"><small>03</small><strong>Conversión: formularios, reservas, cotización</strong><em>+$100–250k</em><b>↗</b></div><div class="tier"><small>04</small><strong>CRM + base de datos</strong><em>$150–300k</em><b>↗</b></div><div class="tier"><small>05</small><strong>Automatización de procesos</strong><em>$200–500k</em><b>↗</b></div><div class="tier"><small>06</small><strong>Agentes IA</strong><em>$250–600k+</em><b>↗</b></div><div class="tier"><small>07</small><strong>Growth + adquisición</strong><em>$300–750k / mes</em><b>↗</b></div><div class="tier"><small>08</small><strong>Estrategia integral tipo partner</strong><em>$750k–$1.5M+ / mes</em><b>↗</b></div></div>
+<p class="fine">Valores referenciales. Cada mejora se presupuesta según alcance y necesidad real.</p>
+</div></section>
+
+<section class="section"><div class="wrap">
+<div class="head"><div><div class="kick">Campaña de adquisición</div><h2>Entramos mostrando valor antes de vender.</h2></div><p>Buscamos negocios con oportunidad digital y usamos la reunión y el prototipo como mecanismo de conversión.</p></div>
+<div class="campaign"><div class="panel"><h3>Embudo LINK</h3><div class="flow"><div><b>Negocio detectado</b><span>sin web / web débil</span></div><div><b>Revisión rápida</b><span>Google + RRSS + oferta</span></div><div><b>Contacto</b><span>mensaje personalizado</span></div><div><b>Reunión</b><span>gratis</span></div><div><b>Prototipo</b><span>gratis</span></div><div><b>Web Start</b><span>$100.000</span></div><div><b>Upgrade</b><span>solo si aporta valor</span></div></div></div>
+<div class="ad"><div><small>Mensaje de campaña</small><h3>¿Tu negocio vive solo en Instagram?</h3><p>Te mostramos sin costo cómo podría verse una web profesional para tu negocio. Si te gusta, la construimos desde $100.000.</p></div><a class="btn" href="#contacto" data-cta="campaign">Pedir prototipo gratis</a></div></div>
+</div></section>
+
+<section class="section"><div class="wrap calc"><div><div class="kick">Haz la cuenta</div><h3>¿Cuántas ventas necesita recuperar tu web?</h3><div class="slider"><label><span>Ticket promedio</span><b id="ticketLabel">$25.000</b></label><input id="ticket" type="range" min="5000" max="200000" step="5000" value="25000"></div><p class="fine">Referencia simple, no una promesa de ventas. Sirve para dimensionar la inversión inicial de $100.000.</p></div><div class="result"><small>Ventas para recuperar $100.000</small><strong id="sales">4</strong><span>ventas aproximadas</span></div></div></section>
+
+<section class="section" id="faq"><div class="wrap faq"><div><div class="kick">Preguntas frecuentes</div><h2>Claro desde el principio.</h2></div><div>
+<details open><summary>¿La primera reunión es realmente gratis?</summary><p>Sí. Sirve para entender tu negocio y definir si podemos ayudarte. No obliga a contratar.</p></details>
+<details><summary>¿Qué incluye el prototipo gratuito?</summary><p>Una dirección visual inicial para que puedas imaginar el resultado. No es el sitio terminado ni un desarrollo completo.</p></details>
+<details><summary>¿Dominio y hosting están incluidos?</summary><p>No. Se cotizan por separado porque dependen del dominio, proveedor y necesidades técnicas.</p></details>
+<details><summary>¿Todas las webs cuestan $100.000?</summary><p>$100.000 corresponde a Web Start. Catálogo, ecommerce, idiomas, reservas, múltiples páginas e integraciones se cotizan aparte.</p></details>
+<details><summary>¿Puedo agregar funciones después?</summary><p>Sí. Esa es la lógica: web, conversión, CRM, automatización, IA, campañas y estrategia, solo cuando el negocio lo necesita.</p></details>
+</div></div></section>
+
+<section class="section" id="contacto"><div class="wrap contact">
+<div><span class="eyebrow">Primera conversación $0</span><h2>Muéstranos tu negocio.</h2><p>Revisaremos tu presencia digital y prepararemos una primera ruta: prototipo, Web Start y próximos pasos posibles.</p><p class="fine"><b>No necesitas saber de tecnología.</b> Nosotros traducimos la necesidad del negocio a una solución concreta.</p></div>
+<form class="form" id="lead">
+<div class="success" id="success">✓ Solicitud registrada. Este formulario está listo para conectarse a Supabase/CRM.</div>
+<div class="field"><label>Nombre</label><input required name="name" placeholder="Tu nombre"></div>
+<div class="field"><label>Negocio</label><input required name="business" placeholder="Nombre del negocio"></div>
+<div class="field"><label>Email / WhatsApp</label><input required name="contact" placeholder="Cómo te contactamos"></div>
+<div class="field"><label>Instagram o web actual</label><input name="url" placeholder="@negocio / www..."></div>
+<div class="field"><label>¿Qué necesitas?</label><select name="need"><option>Quiero una web</option><option>Tengo web pero no convierte</option><option>Reservas / formularios</option><option>CRM / clientes</option><option>Automatización</option><option>Estrategia completa</option></select></div>
+<div class="field"><label>Cuéntanos brevemente</label><textarea name="message" placeholder="Qué vendes, cómo vendes hoy y qué quieres mejorar"></textarea></div>
+<input type="hidden" name="utm_source" id="utm_source"><input type="hidden" name="utm_campaign" id="utm_campaign">
+<button class="submit" type="submit">Pedir diagnóstico + prototipo gratis →</button><div class="fine">Al enviar, aceptas ser contactado para conversar sobre tu proyecto. Sin spam.</div>
+</form></div></section>
+</main>
+
+<footer><div class="wrap footer"><strong>LINK — soluciones digitales que pueden crecer contigo.</strong><span>Web · Datos · Automatización · IA · Growth</span></div></footer>
+<div class="sticky"><span>Web desde $100.000</span><a href="#contacto" data-cta="sticky">Prototipo gratis →</a></div>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+const params = new URLSearchParams(location.search);
+document.getElementById('utm_source').value = params.get('utm_source') || '';
+document.getElementById('utm_campaign').value = params.get('utm_campaign') || '';
+document.querySelectorAll('[data-cta]').forEach(el=>el.addEventListener('click',()=>dataLayer.push({event:'cta_click',location:el.dataset.cta})));
+
+const t=document.getElementById('ticket'),l=document.getElementById('ticketLabel'),s=document.getElementById('sales');
+const fmt=new Intl.NumberFormat('es-CL',{style:'currency',currency:'CLP',maximumFractionDigits:0});
+function up(){const v=+t.value;l.textContent=fmt.format(v);s.textContent=Math.ceil(100000/v)} t.addEventListener('input',up);up();
+
+document.getElementById('lead').addEventListener('submit',e=>{
+  e.preventDefault();
+  const form = new FormData(e.currentTarget);
+  dataLayer.push({event:'lead_submit',need:form.get('need'),utm_source:form.get('utm_source'),utm_campaign:form.get('utm_campaign')});
+  document.getElementById('success').style.display='block';
+  e.currentTarget.querySelector('.submit').textContent='Solicitud registrada';
+  e.currentTarget.querySelector('.submit').disabled=true;
+  /* Próximo paso: reemplazar esta simulación por fetch() a Supabase Edge Function / API Gateway */
+});
+</script>
+</body></html>
